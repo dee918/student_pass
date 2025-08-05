@@ -17,7 +17,7 @@ if st.button("Predict"):
     input_data=np.array([[study_hours, attendance, assignments]])
     prediction=model.predict(input_data)
 
-if prediction[0]==1:
-    st.success("Your student is paas")
-else:
+    if prediction[0]==1:
+        st.success("Your student is paas")
+    else:
     st.error("Your student is not paas")
